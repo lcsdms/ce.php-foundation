@@ -20,8 +20,42 @@
     <h1>Pagina Inicial</h1>
 
     <div class="row">
-    
-      <?php require_once($_GET["arquivo"]);  ?>
+
+      <?php
+
+        /*Verifica se a página é uma página válida*/
+        $pagina  = $_GET['arquivo'];
+          switch ($pagina) {
+            case 'home.php':
+              PaginaDinamica();
+              break;
+
+            case 'empresa.php':
+              PaginaDinamica();
+              break;
+
+            case 'produtos.php':
+              PaginaDinamica();
+              break;
+
+            case 'servicos.php':
+              PaginaDinamica();
+              break;
+
+            case 'contato.php':
+              PaginaDinamica();
+              break;
+
+            default:
+              require_once("404.php");
+              break;
+          }
+          /* Redirecionamento da página conforme validação*/
+          function PaginaDinamica(){
+            require_once($_GET['arquivo']);
+          }
+
+        ?>
 
     </div>
 
