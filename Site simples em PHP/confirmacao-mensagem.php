@@ -1,6 +1,5 @@
 <div class="alert alert-success" role="alert">
-Mensagem enviada com sucesso! <br>
-Seguem dados enviados: <br>
-<?php echo $nome ."<br>". $email ."<br>". $assunto ."<br>". $mensagem; ?>
+Dados enviados com sucesso, abaixo seguem os dados que você enviou:<br>
+<?php echo "Nome: ".$nome ."<br>Email: ". $email ."<br>Assunto:". $assunto ."<br>Mensagem: ". $mensagem; ?>
 
 </div>

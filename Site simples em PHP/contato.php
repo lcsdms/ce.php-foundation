@@ -22,7 +22,7 @@
         <input type="text" name="inputAssunto" class="form-control" placeholder="Assunto" required="true">
 
 		<label for="inputMensagem" class="sr-only">Mensagem</label>
-        <textarea class="form-control"> </textarea>
+        <textarea class="form-control" name="inputMensagem"> </textarea>
         <button class="btn btn-lg btn-primary btn-block" name="submitForm" type="submit">Enviar Mensagem</button>
   	</form>
 </div>
