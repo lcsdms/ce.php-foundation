@@ -21,6 +21,13 @@
         <li><a href="contato">Contato</a></li>
 
       </ul>
+
+    <form class="navbar-form navbar-right form-busca" method="post" action="/busca" accept-charset="utf-8">
+          <div class="form-group">
+            <input type="text" name="busca" placeholder="Digite sua busca" class="form-control">
+          </div>
+          <button type="submit" name="submit_busca" class="btn btn-success">Buscar</button>
+    </form>
     </div>
   </div>
 </nav>

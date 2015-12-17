@@ -10,12 +10,12 @@ function verificaRotas(){
  if ($path == ""){
    $path = "home.php";
  }else{
-    $path .= ".php";
-    if(!file_exists($path)){
-          http_response_code(404);
-          $path = "404.php";
-    }
- }
+	    $path .= ".php";
+	    if(!file_exists($path)){
+	          http_response_code(404);
+	          $path = "404.php";
+	    }
+	}
  return $path;
 }
 

@@ -1,9 +1,7 @@
 <?php
 require_once("rotas.php");
-$path = verificaRotas();
+$path = verificaRotas(); ?>
 
- ?>
-}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>

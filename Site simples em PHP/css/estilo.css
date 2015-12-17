@@ -7,6 +7,10 @@
 	margin-bottom: 10px;
 }
 
+.form-busca .form-group .form-control{
+	margin-bottom: 0px;
+}
+
 .form-contato{
 	width: 600px;
 }
