@@ -6,12 +6,13 @@
 		$dbconfig = include("dbconfig.php");
 		if (!isset($dbconfig['dbinfo'])){
 			throw new \InvalidArgumentException("Configuração de banco de dados não existe!");
-			$host = (isset($config['db']['host'])) ? $config['db']['host'] : null;
-			$dbname = (isset($config['db']['dbname'])) ? $config['db']['dbname'] : null;
-			$user = (isset($config['db']['user'])) ? $config['db']['user'] : null;
-			$password = (isset($config['db']['password'])) ? $config['db']['password'] : null;
+			}else{
+				$host = (isset($dbconfig['dbinfo']['host'])) ? $dbconfig['dbinfo']['host'] : null;
+				$dbname = (isset($dbconfig['dbinfo']['dbname'])) ? $dbconfig['dbinfo']['dbname'] : null;
+				$user = (isset($dbconfig['dbinfo']['user'])) ? $dbconfig['dbinfo']['user'] : null;
+				$password = (isset($dbconfig['dbinfo']['password'])) ? $dbconfig['dbinfo']['password'] : null;
 
-			return new \PDO("mysql:host={$host};dbname={$dbname}",$user,$password);
+				return new \PDO("mysql:host={$host};dbname={$dbname}",$user,$password);
 		}
 
 	}catch(\PDOException $e) {
