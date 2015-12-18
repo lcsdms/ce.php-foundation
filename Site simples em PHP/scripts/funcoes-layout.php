@@ -1,5 +1,5 @@
 <?php
-$logado = true;
+$logado;
 
 function setLogado($boolean){
    global $logado;

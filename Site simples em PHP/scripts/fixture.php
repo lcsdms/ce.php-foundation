@@ -9,6 +9,7 @@
 	$conn->query("DROP TABLE IF EXISTS paginas;
 				  DROP TABLE IF EXISTS produtos;
 				  DROP TABLE IF EXISTS servicos;
+				  DROP TABLE IF EXISTS usuarios;
 		");
 	echo "OK <br>";
 
@@ -38,7 +39,7 @@
 				CREATE TABLE usuarios(
 					id INT PRIMARY KEY AUTO_INCREMENT,
 					login VARCHAR(45) NOT NULL,
-					senha VARCHAR(45) NOT NULL
+					senha VARCHAR(100) NOT NULL
 				);
 				CREATE UNIQUE INDEX usuarios_login_uindex ON pdo.usuarios (login);
 		");
@@ -77,10 +78,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>','e
 	echo "OK <br>";
 
 	echo "Inserindo usuario<br>";
-
-	$conn->query("INSERT INTO usuarios (id,login,senha) VALUES (null,'admin','admin');");
+	$senhaUser= password_hash("admin",PASSWORD_DEFAULT);
+	$conn->query("INSERT INTO usuarios (id,login,senha) VALUES (null,'admin','$senhaUser');");
 	echo "OK - usuario padrao: login:admin / senha:admin <br>";
-
+	echo $senhaUser;
 
 	echo "Todos os dados foram incluidos com sucesso!";
  ?>

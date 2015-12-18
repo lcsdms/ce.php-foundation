@@ -5,6 +5,8 @@ function verificaRotas(){
     require_once("scripts/funcoes-layout.php");
     if($_SESSION["logado"] == 1){
         setLogado(true);
+    }else{
+        setLogado(false);
     }
     /* Verificação de rotas */
   /*Pega as informações da URL*/
@@ -16,6 +18,10 @@ function verificaRotas(){
    $path = "home.php";
  }else{
 	    $path .= ".php";
+         $rotasCpanel= ["cpanel.php","login.php","edit-paginas.php"];
+         if(in_array($path,$rotasCpanel) && $_SESSION["logado"] != 1){
+             $path = "acesso-negado.php";
+         }
 	    if(!file_exists($path)){
 	          http_response_code(404);
 	          $path = "404.php";
@@ -23,5 +29,4 @@ function verificaRotas(){
 	}
  return $path;
 }
-
  ?>

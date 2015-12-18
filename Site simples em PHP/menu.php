@@ -41,7 +41,7 @@
                  aria-labelledby="mySmallModalLabel">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-login" method="post" action="" accept-charset="utf-8">
+                        <form class="form-login" method="post" action="login.php" accept-charset="utf-8">
                             <div class="modal-header">
                                 <h5>Insira suas credenciais para acessar a área administrativa</h5>
                             </div>
