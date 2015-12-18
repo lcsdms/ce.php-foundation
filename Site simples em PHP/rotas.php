@@ -1,6 +1,11 @@
 <?php
 /* Função para verificação de rotas com built-in server */
 function verificaRotas(){
+    session_start();
+    require_once("scripts/funcoes-layout.php");
+    if($_SESSION["logado"] == 1){
+        setLogado(true);
+    }
     /* Verificação de rotas */
   /*Pega as informações da URL*/
  $rota = parse_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
