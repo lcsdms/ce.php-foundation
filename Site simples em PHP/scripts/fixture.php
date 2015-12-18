@@ -34,6 +34,13 @@
 					descricao VARCHAR(1000) CHARACTER SET 'utf8' NOT NULL,
 					PRIMARY KEY (id)
 				 	);
+
+				CREATE TABLE usuarios(
+					id INT PRIMARY KEY AUTO_INCREMENT,
+					login VARCHAR(45) NOT NULL,
+					senha VARCHAR(45) NOT NULL
+				);
+				CREATE UNIQUE INDEX usuarios_login_uindex ON pdo.usuarios (login);
 		");
 	echo "OK <br>";
 
@@ -68,6 +75,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>','e
 		(null,'Serviço 3','Serviço id elit non mi porta gravida at eget metus. Fusce dapibus.');");
 
 	echo "OK <br>";
+
+	echo "Inserindo usuario<br>";
+
+	$conn->query("INSERT INTO usuarios (id,login,senha) VALUES (null,'admin','admin');");
+	echo "OK - usuario padrao: login:admin / senha:admin <br>";
+
 
 	echo "Todos os dados foram incluidos com sucesso!";
  ?>
