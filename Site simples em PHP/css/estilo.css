@@ -19,6 +19,14 @@
 	margin-bottom: 0;
 }
 
+.form-update-pagina{
+	max-width: 600px;
+	margin:0 auto;
+}
+	.form-update-pagina .btn-success{
+		margin-top:10px;
+	}
+
 .form-contato{
 	width: 600px;
 }
