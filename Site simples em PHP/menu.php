@@ -20,7 +20,8 @@
                 <li><a href="produtos">Produtos</a></li>
                 <li><a href="servicos">Serviços</a></li>
                 <li><a href="contato">Contato</a></li>
-                <li class="link-cpanel <?php exibeElementosLogado(); ?>"><a href="cpanel"><span class="glyphicon glyphicon-wrench"></span> Configuração do site</a></li>
+                <li class="link-cpanel <?php exibeElementosLogado(); ?>"><a href="cpanel"><span
+                            class="glyphicon glyphicon-wrench"></span> Configuração do site</a></li>
 
             </ul>
 
@@ -32,10 +33,17 @@
             </form>
 
 
-            <button type="button" class="btn btn-primary navbar-btn navbar-right <?php exibeBotaoLogin(); ?>" data-toggle="modal"
+            <button type="button" class="btn btn-primary navbar-btn navbar-right <?php exibeBotaoLogin(); ?>"
+                    data-toggle="modal"
                     data-target="#modal-login">
                 Administração
             </button>
+
+            <form action="logoff.php" method="post">
+                <button type="submit" name="submit-logoff" class="btn btn-primary navbar-btn navbar-right <?php exibeElementosLogado(); ?>">
+                    Logoff
+                </button>
+            </form>
 
             <div id="modal-login" class="modal fade" tabindex="-1" role="dialog"
                  aria-labelledby="mySmallModalLabel">
